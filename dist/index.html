@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="shortcut icon" href="./assets/favicon.ico" type="image/x-icon" />
+    <title>Todo List</title>
+  </head>
+  <body>
+    <div class="overlay"></div>
+    <header class="header">
+      <h1 class="header__title">Todo List</h1>
+    </header>
+
+    <nav class="nav">
+      <div>
+        <img class="icon" src="./assets/inbox.png" />
+        <button class="overview__button overview__button--inbox" type="button">Inbox</button>
+      </div>
+      <div>
+        <img class="icon" src="./assets/today.png" />
+        <button class="overview__button overview__button--today" type="button">Today</button>
+      </div>
+      <div>
+        <h2 class="title">Projects</h2>
+        <img class="icon" src="./assets/project.png" />
+        <button class="overview__button overview__button--project" type="button">Project</button>
+      </div>
+
+      <div class="new-project">
+        <img class="icon icon--new" src="./assets/new.png" />
+        <button class="overview__button overview__button--new">New Project</button>
+      </div>
+    </nav>
+
+    <main class="main">
+      <header class="main__header">
+        <h2 class="title main__title">Inbox</h2>
+      </header>
+      <div class="new-todo">
+        <img class="icon icon--new" src="./assets/new.png" />
+        <button class="overview__button main__new-todo">New Todo</button>
+      </div>
+    </main>
+
+    <form action="#" class="form form--project">
+      <h2 class="form-project__title">New Project</h2>
+      <label for="name">Project Name</label>
+      <input id="name" class="form__input form__input--name" name="name" type="text" />
+      <div>
+        <button class="form__button form__button--close">Close</button>
+        <button class="form__button form__button--add">Add Project</button>
+      </div>
+    </form>
+
+    <form action="#" class="form form--todo">
+      <h2 class="form-todo__title">New Todo</h2>
+      <label for="title">Title</label>
+      <input type="form__input form__input--title" name="title" />
+      <label for="date">Date</label>
+      <input type="date" class="form__input--date" id="date" name="date" />
+      <label for="select">Select Priority</label>
+      <select name="select" class="form-todo__select" id="select">
+        <option value="low">Low</option>
+        <option value="medium">Medium</option>
+        <option value="high">High</option>
+      </select>
+
+      <div>
+        <button class="form__button form__button--close">Close</button>
+        <button class="form__button form__button--add">Add Project</button>
+      </div>
+    </form>
+    <script src="./bundle.js"></script>
+  </body>
+</html>
