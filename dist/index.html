@@ -19,16 +19,7 @@
     <header class="header">
       <h1 class="header__title">Todo List</h1>
     </header>
-
     <nav class="nav">
-      <div>
-        <img class="icon" src="./assets/inbox.png" />
-        <button class="overview__button overview__button--inbox" type="button">Inbox</button>
-      </div>
-      <div>
-        <img class="icon" src="./assets/today.png" />
-        <button class="overview__button overview__button--today" type="button">Today</button>
-      </div>
       <div>
         <h2 class="title">Projects</h2>
         <img class="icon" src="./assets/project.png" />
@@ -39,46 +30,67 @@
         <img class="icon icon--new" src="./assets/new.png" />
         <button class="overview__button overview__button--new">New Project</button>
       </div>
+
+      <div class="projects"></div>
     </nav>
 
     <main class="main">
       <header class="main__header">
-        <h2 class="title main__title">Inbox</h2>
+        <h2 class="title main__title">Todo list Webpage</h2>
       </header>
+      <p class="intro-text">To start using the web page, please create a project</p>
       <div class="new-todo">
         <img class="icon icon--new" src="./assets/new.png" />
         <button class="overview__button main__new-todo">New Todo</button>
       </div>
+      <section class="todos-container"></section>
     </main>
 
-    <form action="#" class="form form--project">
+    <form class="form form--project">
       <h2 class="form-project__title">New Project</h2>
       <label for="name">Project Name</label>
-      <input id="name" class="form__input form__input--name" name="name" type="text" />
+      <input
+        placeholder="write your project's name"
+        id="name"
+        class="form__input form__input--name"
+        name="name"
+        type="text"
+        required
+      />
       <div>
-        <button class="form__button form__button--close">Close</button>
-        <button class="form__button form__button--add">Add Project</button>
+        <button type="button" class="form__button form__button--close">Close</button>
+        <button type="button" class="form__button form__button--add">Add Project</button>
       </div>
     </form>
 
-    <form action="#" class="form form--todo">
+    <form class="form form--todo">
       <h2 class="form-todo__title">New Todo</h2>
-      <label for="title">Title</label>
-      <input type="form__input form__input--title" name="title" />
+      <label for="title">Task</label>
+      <input
+        id="task"
+        class="form__input form__input--todo form__input--title"
+        name="title"
+        type="text"
+        placeholder="write task"
+      />
       <label for="date">Date</label>
-      <input type="date" class="form__input--date" id="date" name="date" />
+      <input type="date" class="form__input--date form__input--todo" id="date" name="date" />
       <label for="select">Select Priority</label>
-      <select name="select" class="form-todo__select" id="select">
+      <select name="select" class="form-todo__select form__input--todo" id="select">
         <option value="low">Low</option>
         <option value="medium">Medium</option>
         <option value="high">High</option>
       </select>
 
       <div>
-        <button class="form__button form__button--close">Close</button>
-        <button class="form__button form__button--add">Add Project</button>
+        <button type="button" class="form__button form__button--close form__button--close--todo">
+          Close
+        </button>
+        <button type="button" class="form__button form__button--add form__button--add--todo">
+          Add Project
+        </button>
       </div>
     </form>
-    <script src="./bundle.js"></script>
+    <script type="module" src="./bundle.js"></script>
   </body>
 </html>
